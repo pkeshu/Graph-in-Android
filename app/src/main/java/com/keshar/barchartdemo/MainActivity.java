@@ -51,7 +51,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
         tripDaySpinner.setAdapter(adapter);
         tripDaySpinner.setOnItemSelectedListener(this);
-        firebaseDatabase = FirebaseFirestore.getInstance();
+//        firebaseDatabase = FirebaseFirestore.getInstance();
         initialAddTrip.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
