@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity"
+    android:id="@+id/activity_main"
+
+    >
+       <TextView
+           android:id="@+id/trip"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="8dp"
+           android:layout_marginLeft="8dp"
+           android:layout_marginEnd="8dp"
+           android:layout_marginRight="8dp"
+           android:text="Add Trip "
+           android:textColor="@color/colorPrimary"
+           android:textSize="20sp"
+           app:layout_constraintEnd_toEndOf="parent"
+           app:layout_constraintStart_toStartOf="parent"
+           app:layout_constraintTop_toTopOf="parent" />
+
+       <Spinner
+           android:id="@+id/trip_day"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:layout_marginStart="16dp"
+           android:layout_marginLeft="16dp"
+           android:background="@drawable/custom_spinner_background"
+           android:layout_marginTop="24dp"
+           android:layout_marginEnd="16dp"
+           android:textAlignment="center"
+           android:layout_marginRight="16dp"
+           app:layout_constraintEnd_toEndOf="@+id/trip"
+           app:layout_constraintStart_toStartOf="@+id/trip"
+           app:layout_constraintTop_toBottomOf="@+id/trip" />
+
+       <EditText
+           android:id="@+id/trip_count"
+           android:layout_width="0dp"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="16dp"
+           android:ems="10"
+           android:hint="Enter Trip"
+           android:inputType="textPersonName"
+           android:textColor="#000000"
+           android:textColorHint="#74000000"
+           app:layout_constraintEnd_toEndOf="@+id/trip_day"
+           app:layout_constraintStart_toStartOf="@+id/trip_day"
+           app:layout_constraintTop_toBottomOf="@+id/trip_day" />
+
+       <Button
+           android:id="@+id/add_trip_btn1"
+           android:layout_width="wrap_content"
+           android:layout_height="wrap_content"
+           android:layout_marginTop="16dp"
+           android:text="ADD Trip"
+           app:layout_constraintEnd_toEndOf="@+id/trip_count"
+           app:layout_constraintStart_toStartOf="@+id/trip_count"
+           app:layout_constraintTop_toBottomOf="@+id/trip_count" />
+
+    <Button
+        android:id="@+id/show_weekly_chart_btn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="108dp"
+        android:text="Weekly Chart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/add_trip_btn1" />
+
+    <Button
+        android:id="@+id/initial_add"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="36dp"
+        android:text="Initial Add Trip"
+        app:layout_constraintEnd_toEndOf="@+id/show_weekly_chart_btn"
+        app:layout_constraintHorizontal_bias="0.487"
+        app:layout_constraintStart_toStartOf="@+id/show_weekly_chart_btn"
+        app:layout_constraintTop_toBottomOf="@+id/show_weekly_chart_btn" />
+</androidx.constraintlayout.widget.ConstraintLayout>

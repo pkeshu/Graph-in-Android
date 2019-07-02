@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">BarChartDemo</string>
+    <string name="Open">com.keshar.barchartdemo.open</string>
+    <string name="Close">com.keshar.barchartdemo.close</string>
+</resources>

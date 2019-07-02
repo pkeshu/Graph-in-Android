@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "18100074301",
+    "firebase_url": "https://barchartdemo-8e1a3.firebaseio.com",
+    "project_id": "barchartdemo-8e1a3",
+    "storage_bucket": "barchartdemo-8e1a3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:18100074301:android:ec1e057666c5923d",
+        "android_client_info": {
+          "package_name": "com.keshar.barchartdemo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "18100074301-bh279ff0c0o3ggtelov00i2565kri926.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.keshar.barchartdemo",
+            "certificate_hash": "c2f6c548359585cf1381fd4e98e33f388f2f1f80"
+          }
+        },
+        {
+          "client_id": "18100074301-u5o0c6m5tlutf7507qf5v8guq0nsv0rl.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCQE_vsUXOeh4KAZ4gyBtewIzLTm5fdAzY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "18100074301-u5o0c6m5tlutf7507qf5v8guq0nsv0rl.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
