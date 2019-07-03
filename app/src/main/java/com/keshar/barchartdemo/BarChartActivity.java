@@ -20,8 +20,8 @@ import java.util.List;
 
 public class BarChartActivity extends AppCompatActivity {
     private BarChart mBarChart;
-    private List<Model> tripList = new ArrayList<>();
     private TextView totalTripCount;
+    private static String TAG = "com.keshar.barchartdemo.BarChartActivity";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -30,18 +30,11 @@ public class BarChartActivity extends AppCompatActivity {
         mBarChart = findViewById(R.id.barchart);
         totalTripCount = findViewById(R.id.total_trip);
         getTripChart();
-//        tripList.add(new Model("Mon",254));
-//        tripList.add(new Model("Mon",178));
-//        tripList.add(new Model("Mon",222));
-//        tripList.add(new Model("Mon",230));
-//        tripList.add(new Model("Mon",179));
-//        tripList.add(new Model("Sat",134));
-//        tripList.add(new Model("Sun",99));
-
     }
 
     private void getTripChart() {
         mBarChart.setVisibility(View.VISIBLE);
+        //x=day, y=trip
         List<BarEntry> barEntryList = new ArrayList<>();
         barEntryList.add(new BarEntry(1, 167));
         barEntryList.add(new BarEntry(2, 180));
@@ -50,12 +43,14 @@ public class BarChartActivity extends AppCompatActivity {
         barEntryList.add(new BarEntry(5, 0));
         barEntryList.add(new BarEntry(6, 0));
         barEntryList.add(new BarEntry(7, 0));
-        float totalTrip=0;
+
+        //used database value for Bar Entry List here
+        float totalTrip = 0;
         for (BarEntry barE : barEntryList) {
-            Log.d("barValue", String.valueOf(barE.getY()));
-            totalTrip+=barE.getY();
+            Log.d(TAG, String.valueOf(barE.getY()));
+            totalTrip += barE.getY();
         }
-        totalTripCount.setText("Total Trip is: "+String.valueOf(totalTrip));
+        totalTripCount.setText("Total Weekly Trip : " + Integer.valueOf((int) totalTrip));
         BarDataSet barDataSet = new BarDataSet(barEntryList, "Trip");
         barDataSet.setColors(ColorTemplate.MATERIAL_COLORS);
         BarData barData = new BarData(barDataSet);
@@ -65,7 +60,5 @@ public class BarChartActivity extends AppCompatActivity {
         description.setText("Trip rate per Day");
         mBarChart.setDescription(description);
         mBarChart.invalidate();
-
-
     }
 }
